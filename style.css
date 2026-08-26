@@ -63,8 +63,10 @@ main {
 .hero {
     padding: 0;
     overflow: hidden;
-    border-radius: 16px;
     margin-bottom: 40px;
+    width: 100vw; /* full viewport width */
+    margin-left: calc(50% - 50vw); /* break out of centered container */
+    border-radius: 0;
 }
 
 .hero img {
@@ -75,13 +77,42 @@ main {
 }
 
 .hero-banner {
-    min-height: 450px;
+    min-height: 100vh; /* cover full viewport height */
     display: grid;
     place-items: center;
-    background: linear-gradient(135deg, #172033, #2563eb);
+    background-image: url('images/test_group_picture.jpeg'); /* bruker bildet i GruppeCV/images/ */
+    background-size: cover;
+    background-position: center;
     color: white;
     font-size: 48px;
     font-weight: bold;
+    position: relative;
+}
+
+.hero-banner::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.35); /* valgfri mørk overlay for kontrast */
+    z-index: 0;
+}
+
+.hero-banner::before {
+    /* gradient fade nederst som går over i body-bakgrunnen */
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 160px;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, #f4f5f7 100%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.hero-banner > span {
+    position: relative;
+    z-index: 2;
 }
 
 .intro {
@@ -179,7 +210,7 @@ footer {
     }
 
     .hero-banner {
-        min-height: 300px;
+        min-height: 60vh;
         font-size: 34px;
     }
 
