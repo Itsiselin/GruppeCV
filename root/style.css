@@ -77,11 +77,10 @@ main {
 }
 
 .hero-banner {
-    min-height: 100vh;
+    min-height: 100vh; 
     display: grid;
     place-items: center;
-    background-image: url('images/test_group_picture.jpeg'); 
-    background-size: cover;
+    background-image: url('../images/test_group_picture.jpeg'); 
     background-position: center;
     color: white;
     font-size: 48px;
