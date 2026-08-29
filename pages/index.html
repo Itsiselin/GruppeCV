@@ -7,34 +7,86 @@
     <link rel="stylesheet" href="../root/style.css">
 </head>
 <body>
-    <nav aria-label="Hovednavigasjon">
+    <nav class="top-navigation" aria-label="Hovednavigasjon">
         <a href="#hjem">Hjem</a>
         <a href="#om-oss">Om oss</a>
     </nav>
-    <section class="hero">
-        <div class="hero-banner" aria-label="Gruppe CV">
+
+    <header class="page-hero" aria-label="Gruppe CV">
+        <div class="hero-banner">
             <span>Gruppe CV</span>
         </div>
-    </section>
+    </header>
 
-    <main>
-        <section id="hjem" class="intro">
+    <main class="page-content">
+        <section id="hjem" class="welcome-section">
             <h2>Velkommen</h2>
             <p>Vi er en gruppe studenter som presenterer våre erfaringer, ferdigheter og utdanning på denne nettsiden.</p>
         </section>
-        <section id="om-oss">
+
+        <section id="om-oss" class="team-section">
             <h2>Om oss</h2>
-            <div class="members">
-                <article class="member"><h3>Iselin</h3><p>Student og interessert i teknologi og utvikling.</p><a href="../pages/Iselin.html">Se CV</a></article>
-                <article class="member"><h3>Ellen</h3><p>Student med interesse for programmering og design.</p><a href="../pages/Ellen.html">Se CV</a></article>
-                <article class="member"><h3>Hanna</h3><p>Student med interesse for IT og problemløsning.</p><a href="../pages/Hanna.html">Se CV</a></article>
-                <article class="member"><h3>Fatih</h3><p>Student med interesse for teknologi og utvikling.</p><a href="../pages/Fatih.html">Se CV</a></article>
-                <article class="member"><h3>Jakub</h3><p>Student med interesse for IT og digitale løsninger.</p><a href="../pages/Jakub.html">Se CV</a></article>
+            <div class="team-grid">
+                <article class="team-card">
+                    <div class="team-card__image-wrap">
+                        <img class="team-card__image" src="../images/midlertidigbilde.jpg" alt="Iselin">
+                    </div>
+                    <div class="team-card__content">
+                        <h3>Iselin</h3>
+                        <p>Student og interessert i teknologi og utvikling.</p>
+                        <a href="Iselin.html">Se CV</a>
+                    </div>
+                </article>
+
+                <article class="team-card">
+                    <div class="team-card__image-wrap">
+                        <img class="team-card__image" src="../images/test_group_picture.jpeg" alt="Ellen">
+                    </div>
+                    <div class="team-card__content">
+                        <h3>Ellen</h3>
+                        <p>Student med interesse for programmering og design.</p>
+                        <a href="Ellen.html">Se CV</a>
+                    </div>
+                </article>
+
+                <article class="team-card">
+                    <div class="team-card__image-wrap">
+                        <img class="team-card__image" src="../../GruppeCV/images/Hanna.JPG" alt="Hanna">
+                    </div>
+                    <div class="team-card__content">
+                        <h3>Hanna</h3>
+                        <p>Student med interesse for IT og problemløsning.</p>
+                        <a href="Hanna.html">Se CV</a>
+                    </div>
+                </article>
+
+                <article class="team-card">
+                    <div class="team-card__image-wrap">
+                        <img class="team-card__image" src="../images/test_group_picture.jpeg" alt="Fatih">
+                    </div>
+                    <div class="team-card__content">
+                        <h3>Fatih</h3>
+                        <p>Student med interesse for teknologi og utvikling.</p>
+                        <a href="Fatih.html">Se CV</a>
+                    </div>
+                </article>
+
+                <article class="team-card">
+                    <div class="team-card__image-wrap">
+                        <img class="team-card__image" src="../images/midlertidigbilde.jpg" alt="Kuba">
+                    </div>
+                    <div class="team-card__content">
+                        <h3>Kuba</h3>
+                        <p>Student med interesse for IT og digitale løsninger.</p>
+                        <a href="Jakub.html">Se CV</a>
+                    </div>
+                </article>
             </div>
         </section>
-        
     </main>
 
-    <footer><p>&copy; 2026 Gruppe CV</p></footer>
+    <footer>
+        <p>&copy; 2026 Gruppe CV</p>
+    </footer>
 </body>
 </html>
