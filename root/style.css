@@ -117,8 +117,6 @@ main {
     gap: 20px;
     margin-top: 0px;
     z-index: 2;
-     
-
 }
 
 .welcome-section {
@@ -144,6 +142,7 @@ main {
 
 .team-section {
     margin-bottom: 40px;
+    width: 100%;
 }
 
 .team-section > h2 {
@@ -173,8 +172,8 @@ main {
 }
 
 .team-card__image-wrap {
-    width: 92px;
-    height: 92px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     overflow: hidden;
     border: 4px solid #e8edff;
