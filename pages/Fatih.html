@@ -19,7 +19,7 @@
 
         <section class="profile">
 
-            <img src="../images/midlertidigbilde.jpg" alt="Fatih Yasir Isim">
+            <img src="../images/fatih.jpg" alt="Fatih Yasir Isim">
 
             <div class="profile-text">
 
@@ -43,25 +43,32 @@
                     <span>Feilsøking</span>
                 </div>
 
-            </div>
+                <div style="display: flex; gap: 12px; margin-top: 20px; align-items: center;">
+                    <a href="https://github.com/fatihisim" target="_blank">
+                        <img src="../images/github.svg" alt="GitHub" style="width: 36px; height: 36px; object-fit: contain;">
+                    </a>
+                    <a href="https://www.linkedin.com/in/fatih-yasir-isim-092a08322/" target="_blank">
+                        <img src="../images/linkedin.png" alt="LinkedIn" style="width: 36px; height: 36px; object-fit: contain;">
+                    </a>
+                </div>
 
         </section>
 
 
-        <section class="profile-content">
-
+        <section class="profile-content" style="grid-template-columns: 1fr;">
+        
             <div class="profile-card">
-
+        
                 <h2>Om meg</h2>
-
+        
                 <p>
                     Jeg heter Fatih Yasir Isim og er 33 år. Jeg jobber som
                     IKT-medarbeider i et datasenter ved siden av studiene, hvor jeg
                     løser saker som gjelder feilsøking og maskinvare i et miljø hvor
                     feil får konsekvenser.
                 </p>
-                
-                <p>
+        
+                <p style="margin-top: 16px;">
                     Før jeg begynte med IT tok jeg en bachelor i jus i Tyrkia og
                     jobbet som advokat i nesten fire år, hvor jeg hadde ansvar for
                     egne saker og representerte klienter i retten. Å bytte fagfelt og
@@ -70,34 +77,84 @@
                     hovedvekt på utvikling, men der problemløsning og god
                     kommunikasjon også er en viktig del av arbeidet.
                 </p>
-
+        
             </div>
-
-
-            <div class="profile-card">
-
+        
+        </section>
+        
+        
+        <section class="profile-content">
+        
+            <div class="profile-card" style="font-size: 14px;">
+        
                 <h2>Utdanning</h2>
-
+        
                 <p>
                     <strong>Bachelor i IT og informasjonssystemer</strong><br>
                     Universitetet i Agder<br>
                     2024 – 2027
                 </p>
-
+        
+                <p style="margin-top: 20px;">
+                    <strong>Bachelor i jus</strong><br>
+                    Ankara Yildirim Beyazit Universitet (Tyrkia)<br>
+                    2011 – 2017
+                </p>
+        
+            </div>
+        
+            <div class="profile-card" style="font-size: 14px;">
+        
+                <h2>Erfaring</h2>
+        
+                <p>
+                    <strong>IKT-medarbeider</strong><br>
+                    Jobzone Norge AS - Bulk Data Center<br>
+                    Februar 2026 – nå
+                </p>
+        
+                <p style="margin-top: 20px;">
+                    <strong>Advokat</strong><br>
+                    Ankara, Tyrkia<br>
+                    August 2018 – Oktober 2021
+                </p>
+        
+                <p style="margin-top: 20px;">
+                    <strong>Juridisk praksis</strong><br>
+                    Ankara, Tyrkia<br>
+                    Februar 2017 – Mai 2018
+                </p>
+        
             </div>
 
         </section>
 
-
-        <section class="cv-section">
-
-            <h2>Prosjekter</h2>
-
-            <p>
-                Her kan du vise noen utvalgte prosjekter fra studiet,
-                med en kort beskrivelse av hva du jobbet med og hvilken rolle du hadde.
-            </p>
-
+        <section class="projects">
+        
+            <div class="project-grid" style="grid-template-columns: 1fr;">
+        
+                <article class="project-card">
+                    <div class="project-content">
+                        <span>Prosjekt / Webutvikling</span>
+                        <h3>NRL Hindringsrapportering</h3>
+                        <p>
+                            Webapplikasjon for rapportering av luftfartshindre til Nasjonalt
+                            register over luftfartshindre, utviklet på oppdrag fra Kartverket
+                            og Norsk Luftambulanse. Piloter registrerer hindre direkte i et
+                            kart, mens registerførere behandler og godkjenner rapportene i
+                            et eget dashboard. Løsningen er bygget med ASP.NET Core, MariaDB
+                            og Leaflet, kjører i Docker og har rollebasert tilgangsstyring.
+                            Jeg var hovedansvarlig for utviklingen.
+                        </p>
+                        <a href="https://github.com/fatihisim/IS-202-Programmeringsprosjekt-Gruppe17" target="_blank"
+                            style="display: inline-block; margin-top: 16px; color: #fff; background: linear-gradient(135deg, #2563eb, #3b82f6); text-decoration: none; font-weight: bold; padding: 10px 18px; border-radius: 999px; font-size: 0.85rem;">
+                            Se på GitHub
+                        </a>
+                    </div>
+                </article>
+        
+            </div>
+        
         </section>
 
     </main>
