@@ -47,13 +47,12 @@ main {
 }
 
 .page-hero {
-    width: 1500px;
+    width: 100%;
     margin: 0 auto;
-    
 }
 
 .hero-banner {
-    min-height: 500px; 
+    min-height: calc(100vh - 61px);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -96,7 +95,7 @@ main {
     left: 0;
     right: 0;
     bottom: 0;
-    height: 130px;
+    height: 230px;
     background: linear-gradient(180deg, rgba(0,0,0,0) 0%, #f4f5f7 100%);
     pointer-events: none;
     z-index: 1;
