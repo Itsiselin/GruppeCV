@@ -143,7 +143,7 @@ main {
 .team-section {
     margin-bottom: 40px;
     width: 100%;
-}
+    }
 
 .team-section > h2 {
     text-align: center;
@@ -384,78 +384,4 @@ footer {
     color: #6b7280;
     margin: 0;
     line-height: 1.4;
-}
-
-
-.projects {
-    margin: 70px 0;
-}
-
-.projects-header {
-    margin-bottom: 35px;
-}
-
-.projects-header p {
-    color: #2563eb;
-    font-size: 13px;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    margin-bottom: 8px;
-}
-
-.projects-header h2 {
-    font-size: 36px;
-    font-weight: 500;
-    color: #172033;
-}
-
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 22px;
-}
-
-.project-card {
-    background-color: white;
-    border-radius: 18px;
-    overflow: hidden;
-    border: 1px solid #e5e7eb;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.project-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 25px rgba(23, 32, 51, 0.08);
-}
-
-.project-image {
-    height: 210px;
-    background-color: #eef2f8;
-}
-
-.project-content {
-    padding: 26px;
-}
-
-.project-content span {
-    color: #2563eb;
-    font-size: 12px;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.project-content h3 {
-    color: #172033;
-    font-size: 23px;
-    font-weight: 600;
-    margin: 8px 0 12px;
-}
-
-.project-content p {
-    color: #6b7280;
-    font-size: 14px;
-    line-height: 1.7;
 }
