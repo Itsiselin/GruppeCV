@@ -13,7 +13,7 @@ body {
     background: linear-gradient(180deg, #f4f5f7 0%, #eef3ff 100%);
     color: #1f2937;
     line-height: 1.6;
-     overflow-x: hidden;
+    overflow-x: hidden;
 }
 
 nav {
@@ -26,7 +26,6 @@ nav {
     top: 0;
     z-index: 10;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-    
 }
 
 nav a {
@@ -41,19 +40,19 @@ nav a:hover {
 }
 
 main {
-   max-width: 1100px;
+    max-width: 1100px;
     margin: 60px auto 40px;
     padding: 0 20px;
 }
 
 .page-hero {
-    width: 1500px;
+    width: 100%;
+    max-width: 1500px;
     margin: 0 auto;
-    
 }
 
 .hero-banner {
-    min-height: 500px; 
+    min-height: 500px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -61,26 +60,14 @@ main {
     place-items: center;
     background-image: url('../images/gruppebildet.JPG');
     background-size: cover;
-    background-position:center;
+    background-position: center;
     color: white;
     font-size: 48px;
     font-weight: bold;
     background-repeat: no-repeat;
     position: relative;
     padding-top: 20px;
-    
 }
-
-
-
-.hero-banner::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.35);
-    z-index: 0;
-}
-
 
 .hero-banner::after {
     content: "";
@@ -102,7 +89,6 @@ main {
     z-index: 1;
 }
 
-
 .hero-banner > span {
     position: relative;
     z-index: 2;
@@ -110,6 +96,7 @@ main {
     font-weight: bold;
     margin-top: 300px;
 }
+
 .hero-banner #group-members-bg {
     display: flex;
     flex-direction: row;
@@ -143,7 +130,7 @@ main {
 .team-section {
     margin-bottom: 40px;
     width: 100%;
-    }
+}
 
 .team-section > h2 {
     text-align: center;
