@@ -19,25 +19,51 @@ body {
 nav {
     display: flex;
     justify-content: center;
-    gap: 35px;
-    background-color: rgba(255, 255, 255, 0.95);
-    padding: 18px;
-    position: sticky;
+    gap: 0;
+    width: min(360px, calc(100% - 32px));
+    margin: 16px auto 0;
+    padding: 4px;
+    background-color: rgba(255, 255, 255, 0.96);
+    border: 1px solid rgba(23, 32, 51, 0.14);
+    border-radius: 999px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     top: 0;
     z-index: 10;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-    
+    box-shadow: 0 8px 20px rgba(23, 32, 51, 0.16);
 }
 
 nav a {
+    flex: 1;
     color: #172033;
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.2s ease;
+    text-align: center;
+    padding: 8px 14px;
+    border-radius: 999px;
+    transition: color 0.2s ease, background-color 0.2s ease;
 }
 
 nav a:hover {
     color: #2563eb;
+}
+
+nav a.active {
+    color: white;
+    background-color: #2563eb;
+}
+
+@media (max-width: 520px) {
+    nav {
+        gap: 4px;
+        width: calc(100% - 24px);
+        margin-top: 10px;
+    }
+
+    nav a {
+        padding: 8px 12px;
+    }
 }
 
 main {
@@ -52,7 +78,7 @@ main {
 }
 
 .hero-banner {
-    min-height: calc(100vh - 61px);
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
