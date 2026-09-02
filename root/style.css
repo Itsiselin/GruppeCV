@@ -11,7 +11,7 @@ html {
 body {
     font-family: Arial, sans-serif;
     background: linear-gradient(180deg, #f4f5f7 0%, #eef3ff 100%);
-    color: #1f2937;
+    color: #1e3566;
     line-height: 1.6;
      overflow-x: hidden;
 }
@@ -37,6 +37,8 @@ nav a {
     color: #172033;
     text-decoration: none;
     font-weight: bold;
+    position: relative;
+    left: 4px;
     transition: color 0.2s ease;
 }
 
@@ -51,9 +53,8 @@ main {
 }
 
 .page-hero {
-    width: 1500px;
+    width: 100%;
     margin: 0 auto;
-    
 }
 
 .hero-banner {
@@ -63,9 +64,9 @@ main {
     justify-content: flex-start;
     align-items: center;
     place-items: center;
-    background-image: url('../images/gruppebildet.jpg');
+    background-image: url('../images/gruppebilde2.JPG');
     background-size: cover;
-    background-position:center;
+    background-position: center center;
     color: white;
     font-size: 48px;
     font-weight: bold;
@@ -347,6 +348,72 @@ footer {
 .cv-section p {
     color: #6b7280;
     max-width: 800px;
+}
+
+.contact-section {
+    max-width: 1100px;
+    margin: 0 auto 40px;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.contact-section h2 {
+    color: #172033;
+    font-size: 26px;
+    margin-bottom: 8px;
+    text-align: center;
+    width: 100%;
+}
+
+.contact-section > p {
+    color: #6b7280;
+    margin-bottom: 22px;
+    text-align: center;
+    width: 100%;
+}
+
+.contact-options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+}
+
+.contact-option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    color: #2563eb;
+    text-decoration: none;
+    border: 1px solid #dbe5f4;
+    border-radius: 50%;
+    transition: color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
+}
+
+.contact-option:hover {
+    color: #ffffff;
+    background-color: #2563eb;
+    transform: translateY(-2px);
+}
+
+.contact-icon {
+    font-size: 25px;
+    line-height: 1;
+}
+
+.contact-icon-image {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+}
+
+@media (max-width: 700px) {
+    .contact-options {
+        gap: 14px;
+    }
 }
 
 .team-members-grid {
