@@ -332,6 +332,66 @@ footer {
     max-width: 800px;
 }
 
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 28px;
+}
+
+.project-card {
+    background-color: #f8faff;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    padding: 24px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(23, 32, 51, 0.08);
+}
+
+.project-card h3 {
+    color: #172033;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 18px;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+}
+
+.project-tags span {
+    background-color: #eef2f8;
+    color: #172033;
+    padding: 5px 9px;
+    border-radius: 7px;
+    font-size: 12px;
+    font-weight: 600;
+}
+.project-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    border-radius: 12px;
+    margin-bottom: 22px;
+}
+.kartverket-img {
+    transform: scale(1.18);
+    height: 280px;
+    object-fit: contain;
+    transform-origin: center;
+}
+
 .team-members-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
