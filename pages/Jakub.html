@@ -57,17 +57,16 @@
 
         </section>
         
-        <div style="display: flex; gap: 12px; margin-top: 20px; align-items: center;">
-            <a href="DIN GITHUB-LENKE HER" target="_blank">
-            </a>
-        
-            <a href="DIN LINKEDIN-LENKE HER" target="_blank">
-            </a>
-        </div>
+       
 
 
         <section class="profile-content">
-			<div class="animated-border">
+			<div class="animated-border"
+			 style="
+				--border-color: #ff6600;
+				--border-speed: 4s;
+				--border-offset: 120deg;
+			 ">
             <div class="profile-card">
 
                 <h2>Om meg</h2>
@@ -78,22 +77,28 @@
 
             </div></div>
 
+				<div class="animated-border"
+				 style="
+					--border-color: #0800fc;
+					--border-speed: 10s;
+					--border-offset: 0deg;
+				 ">
+            <div class="profile-card" style="height:100%">
+				
+					<h2>Utdanning</h2>
 
-            <div class="profile-card">
-
-                <h2>Utdanning</h2>
-
-                <p>
-                    <strong>Bachelor i IT og informasjonssystemer</strong><br>
-                    Universitetet i Agder<br>
-                    2024 – 2027
-                </p>
-				<p>
-					<strong>Livets harde skole</strong><br>
-					Praktisk erfaring<br>
-					2003 – d.d.
-				</p>
-            </div>
+					<p>
+						<strong>Bachelor i IT og informasjonssystemer</strong><br>
+						Universitetet i Agder<br>
+						2024 – 2027
+					</p>
+					<p>
+						<strong>Livets harde skole</strong><br>
+						Praktisk erfaring<br>
+						2003 – d.d.
+					</p>
+				</div>
+			</div>
 
         </section>
 
@@ -374,24 +379,28 @@
 }
 
 .animated-border {
+    --border-color: orange;
+    --border-speed: 4s;
+    --border-offset: 0deg;
+
     position: relative;
     padding: 1px;
     border-radius: 17px;
 
     background: conic-gradient(
-        from var(--angle),
+        from var(--border-offset),
         transparent 0deg,
         transparent 340deg,
-        rgba(255, 165, 0, 0.1) 345deg,
-        orange 350deg,
-        rgba(255, 165, 0, 0.1) 355deg,
+        color-mix(in srgb, var(--border-color) 10%, transparent) 345deg,
+        var(--border-color) 350deg,
+        color-mix(in srgb, var(--border-color) 10%, transparent) 355deg,
         transparent 360deg
     );
 
-    animation: border-spin 4s linear infinite;
+    animation: border-spin var(--border-speed) linear infinite;
 }
 
-@property --angle {
+@property --border-offset {
     syntax: "<angle>";
     initial-value: 0deg;
     inherits: false;
@@ -399,7 +408,7 @@
 
 @keyframes border-spin {
     to {
-        --angle: 360deg;
+        --border-offset: 360deg;
     }
 }
 	
