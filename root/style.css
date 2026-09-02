@@ -16,6 +16,10 @@ body {
      overflow-x: hidden;
 }
 
+.hanna-page {
+    background: #fce7f3;
+}
+
 nav {
     display: flex;
     justify-content: center;
