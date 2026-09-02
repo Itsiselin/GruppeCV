@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../root/style.css">
-    <title>Iselin Rolness | Gruppe CV</title>
+    <title>Jakub Broz | Gruppe CV</title>
 </head>
 
 <body>
@@ -32,79 +32,127 @@
                 </p>
 
                 <div class="skills">
-                    <span>Full Webstack</span>
-                    <span>Multispråklig Programmering</span>
-                    <span>Microkontrollere</span>
-					<span>IoT</span>
-					<span>Moew</span>
-					<span>Cats</span>
-                    
-                </div>
+					<span>Fullstack-utvikling</span>
+					<span>Backend & API-er</span>
+					<span>ESP32 & IoT</span>
+					<span>Linux & Servere</span>
+					<span>GIS & Geodata</span>
+					<span>Integrerte systemer</span>
+					
+				</div>
 				<br>
 				<div class="links">
-                    <a href='https://www.linkedin.com/in/jakub-broz-5860bb350/'>LinkedIn</a>
-                    <a href='https://github.com/J6kub'>GitHub</a>
-                    
-                    
-                </div>
+					<a href="https://www.linkedin.com/in/jakub-broz-5860bb350/">
+						<img src="../images/linkedin.png" alt="LinkedIn">
+						<span>LinkedIn</span>
+					</a>
+
+					<a href="https://github.com/J6kub">
+						<img src="../images/github.svg" alt="GitHub">
+						<span>GitHub</span>
+					</a>
+				</div>
 
             </div>
 
         </section>
         
-        <div style="display: flex; gap: 12px; margin-top: 20px; align-items: center;">
-            <a href="DIN GITHUB-LENKE HER" target="_blank">
-                <img src="../images/github.svg" alt="GitHub" style="width: 36px; height: 36px; object-fit: contain;">
-            </a>
-        
-            <a href="DIN LINKEDIN-LENKE HER" target="_blank">
-                <img src="../images/linkedin.png" alt="LinkedIn" style="width: 36px; height: 36px; object-fit: contain;">
-            </a>
-        </div>
+       
 
 
         <section class="profile-content">
-
+			<div class="animated-border"
+			 style="
+				--border-color: #ff6600;
+				--border-speed: 4s;
+				--border-offset: 120deg;
+			 ">
             <div class="profile-card">
 
                 <h2>Om meg</h2>
 
-                <p>
-                    .
-                </p>
+                <p> Som alle de andre er jeg student i IT og informasjonssystemer, og liker spesielt å bygge ting som faktisk fungerer utenfor selve koden. </p>
 
-                <p>
-                    
-                </p>
+<p> Jeg liker å jobbe med alt fra backend og webutvikling til fysiske systemer, og har blant annet jobbet med egne infotainment-løsninger, ESP32, IoT, sensorer og 3D-printing. Jeg synes det er ekstra gøy når programvare og fysisk teknologi må spille sammen. </p>
 
-            </div>
+            </div></div>
 
+				<div class="animated-border"
+				 style="
+					--border-color: #0800fc;
+					--border-speed: 10s;
+					--border-offset: 0deg;
+				 ">
+            <div class="profile-card" style="height:100%">
+				
+					<h2>Utdanning</h2>
 
-            <div class="profile-card">
-
-                <h2>Utdanning</h2>
-
-                <p>
-                    <strong>Bachelor i IT og informasjonssystemer</strong><br>
-                    Universitetet i Agder<br>
-                    2024 – 2027
-                </p>
-
-            </div>
-
-        </section>
-
-
-        <section class="cv-section">
-
-            <h2>Prosjekter</h2>
-
-            <p>
-                Her kan du vise noen utvalgte prosjekter fra studiet,
-                med en kort beskrivelse av hva du jobbet med og hvilken rolle du hadde.
-            </p>
+					<p>
+						<strong>Bachelor i IT og informasjonssystemer</strong><br>
+						Universitetet i Agder<br>
+						2024 – 2027
+					</p>
+					<p>
+						<strong>Livets harde skole</strong><br>
+						Praktisk erfaring<br>
+						2003 – d.d.
+					</p>
+				</div>
+			</div>
 
         </section>
+
+
+        <section class="cv-section projects">
+
+			<h2>Prosjekter</h2>
+
+			<div class="project-grid">
+
+				<article class="project-card">
+					<div class="project-number">01</div>
+
+					<h3>Kartverket Register</h3>
+
+					<p>
+						Prosjekt for IS-200, Vi fikk oppdrag fra kartverket å lage et register for luftfartshindre. Der fikk vi lære om GIS teknologier og vi fikk velge fritt hva slags teknologi vi bruker for utvikling.
+					</p>
+
+					<a href="https://github.com/HenellTT/KartverketRegister" target="_blank" rel="noopener noreferrer">
+						Se på GitHub →
+					</a>
+				</article>
+
+
+				<article class="project-card">
+					<div class="project-number">02</div>
+
+					<h3>Bunker Kart</h3>
+
+					<p>Prosjekt i IS-218 hvor vi lærte om innhenting, visualisering og behandling av GIS-data. Vi jobbet blant annet med å manipulere og sette sammen data fra ulike kilder. Som prosjekt lagde vi et kart over alle tilfluktsrom i Norge, med integrasjon mot Statens vegvesens API for ruteplanlegging.
+					</p>
+
+					<a href="https://github.com/Arildb88/IS-218-GIS" target="_blank" rel="noopener noreferrer">
+						Se på GitHub →
+					</a>
+				</article>
+
+
+				<article class="project-card">
+					<div class="project-number">03</div>
+
+					<h3>Infotainment E39</h3>
+
+					<p>Som sideprosjekt utvikler jeg et custom infotainmentsystem til en veteran bil, basert på en Linux-minipc og flere ESP32-noder for sensorer og datainnsamling. Systemet bruker PostgreSQL, Grafana, FastAPI og Qt. Gjennom prosjektet har jeg fått erfaring med lydsystemer, Linux, mikrokontrollere, sensorer og integrasjon mellom hardware og software.</p>
+
+					<a href="https://github.com/J6kub/e39-infotainment-master" target="_blank" rel="noopener noreferrer">
+						Se på GitHub →
+					</a>
+				</article>
+
+			</div>
+
+		</section>
 
     </main>
 
@@ -116,38 +164,255 @@
 </body>
 
 <style>
-	body {
-		background:none !important;
-		background-color:rgba(0,0,0,0) !important;
-		overflow-x:hidden;
+    body {
+        background: none !important;
+        background-color: rgba(0,0,0,0) !important;
+        overflow-x: hidden;
+    }
+
+    #can {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: -10;
+        pointer-events: none;
+    }
+
+    .links {
+        display: flex;
+        gap: 10px;
+    }
+
+    .links a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+
+        width: 120px;
+        height: 50px;
+        box-sizing: border-box;
+
+        text-decoration: none;
+        border-radius: 10px;
+        padding: 10px;
+
+        background-color: orange;
+        color: white;
+
+        transition: transform 0.2s;
+    }
+
+    .links a:hover {
+        transform: scale(1.1);
+    }
+
+    .links a img {
+        width: 25px;
+        height: 25px;
+        object-fit: contain;
+        max-width: 100%;
+        max-height: 100%;
+        flex-shrink: 0;
+    }
+	/* =========================
+	   PROJECTS
+	========================= */
+
+	.projects {
+		margin-top: 40px;
 	}
 
-	#can {
-		width:100%;
-		height:100%;
-		position:fixed;
-		left:0;
-		top:0;
-		z-index:-10;
-		pointer-events:none;
+	.projects > h2 {
+		font-size: 2rem;
+		margin-bottom: 25px;
 	}
-	.links {
-		.skills;
-		
+
+
+	/* Grid */
+
+	.project-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+		gap: 20px;
+	}
+
+
+	/* Card */
+
+	.project-card {
+		position: relative;
+
+		padding: 28px;
+		min-height: 250px;
+
+		border-radius: 18px;
+
+		background: rgba(255, 255, 255, 0.07);
+		border: 1px solid rgba(255, 255, 255, 0.15);
+
+		backdrop-filter: blur(10px);
+
+		overflow: hidden;
+
+		transition:
+			transform 0.25s ease,
+			border-color 0.25s ease,
+			box-shadow 0.25s ease;
+	}
+
+
+	/* Subtle glow */
+
+	.project-card::before {
+		content: "";
+
+		position: absolute;
+
+		width: 140px;
+		height: 140px;
+
+		top: -70px;
+		right: -70px;
+
+		border-radius: 50%;
+
+		background: orange;
+
+		opacity: 0.12;
+
+		filter: blur(35px);
+
+		transition: opacity 0.25s ease;
+	}
+
+
+	/* Hover */
+
+	.project-card:hover {
+		transform: translateY(-7px);
+
+		border-color: orange;
+
+		box-shadow:
+			0 10px 30px rgba(0, 0, 0, 0.25),
+			0 0 25px rgba(255, 165, 0, 0.12);
+	}
+
+	.project-card:hover::before {
+		opacity: 0.25;
+	}
+
+
+	/* Project number */
+
+	.project-number {
+		font-family: monospace;
+
+		font-size: 0.8rem;
+		font-weight: bold;
+
+		color: orange;
+
+		margin-bottom: 12px;
+
+		opacity: 0.8;
+	}
+
+
+	/* Title */
+
+	.project-card h3 {
+		margin: 0 0 12px;
+
+		font-size: 1.35rem;
+	}
+
+
+	/* Description */
+
+	.project-card p {
+		margin: 0 0 25px;
+
+		line-height: 1.6;
+
+		opacity: 0.8;
+	}
+
+
+	/* GitHub link */
+
+	.project-card a {
+		display: inline-flex;
+		align-items: center;
+
+		padding: 9px 14px;
+
+		border-radius: 9px;
+
+		background: orange;
+		color: white;
+
+		text-decoration: none;
+		font-weight: 600;
+
+		transition:
+			transform 0.2s ease,
+			background 0.2s ease;
+	}
+
+	.project-card a:hover {
+		transform: translateX(5px);
+		background: #ffb52e;
 	}
 	
-	.links a {
-		text-decoration:none;
-		border-radius:10px;
-		padding:10px;
-		background-color:orange;
-		color:white;
-		transition:padding 0.2s;
-	}
-	.links a:hover {
-		padding:14px;
-	}
-</style>
+	.profile-card {
+    position: relative;
+
+    background-color: white;
+    padding: 32px;
+    border-radius: 16px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+}
+
+.animated-border {
+    --border-color: orange;
+    --border-speed: 4s;
+    --border-offset: 0deg;
+
+    position: relative;
+    padding: 1px;
+    border-radius: 17px;
+
+    background: conic-gradient(
+        from var(--border-offset),
+        transparent 0deg,
+        transparent 340deg,
+        color-mix(in srgb, var(--border-color) 10%, transparent) 345deg,
+        var(--border-color) 350deg,
+        color-mix(in srgb, var(--border-color) 10%, transparent) 355deg,
+        transparent 360deg
+    );
+
+    animation: border-spin var(--border-speed) linear infinite;
+}
+
+@property --border-offset {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@keyframes border-spin {
+    to {
+        --border-offset: 360deg;
+    }
+}
+	
+}</style>
 
 <canvas id="can"></canvas>
 
