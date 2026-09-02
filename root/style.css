@@ -51,9 +51,8 @@ main {
 }
 
 .page-hero {
-    width: 1500px;
+    width: 100%;
     margin: 0 auto;
-    
 }
 
 .hero-banner {
@@ -65,7 +64,7 @@ main {
     place-items: center;
     background-image: url('../images/gruppebildet.jpg');
     background-size: cover;
-    background-position:center;
+    background-position: center center;
     color: white;
     font-size: 48px;
     font-weight: bold;
