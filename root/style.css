@@ -89,12 +89,12 @@ main {
     z-index: 1;
 }
 
-.hero-banner > span {
+.hero-banner #gruppenavn {
     position: relative;
     z-index: 2;
     font-size: 45px;
     font-weight: bold;
-    margin-top: 300px;
+    margin-top: 30px;
 }
 
 .hero-banner #group-members-bg {
