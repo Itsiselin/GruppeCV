@@ -32,9 +32,19 @@
                 </p>
 
                 <div class="skills">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>JavaScript</span>
+                    <span>Full Webstack</span>
+                    <span>Multispråklig Programmering</span>
+                    <span>Microkontrollere</span>
+					<span>IoT</span>
+					<span>Moew</span>
+					<span>Cats</span>
+                    
+                </div>
+				<br>
+				<div class="links">
+                    <a href='https://www.linkedin.com/in/jakub-broz-5860bb350/'>LinkedIn</a>
+                    <a href='https://github.com/J6kub'>GitHub</a>
+                    
                     
                 </div>
 
@@ -104,5 +114,671 @@
     </footer>
 
 </body>
+
+<style>
+	body {
+		background:none !important;
+		background-color:rgba(0,0,0,0) !important;
+		overflow-x:hidden;
+	}
+
+	#can {
+		width:100%;
+		height:100%;
+		position:fixed;
+		left:0;
+		top:0;
+		z-index:-10;
+		pointer-events:none;
+	}
+	.links {
+		.skills;
+		
+	}
+	
+	.links a {
+		text-decoration:none;
+		border-radius:10px;
+		padding:10px;
+		background-color:orange;
+		color:white;
+		transition:padding 0.2s;
+	}
+	.links a:hover {
+		padding:14px;
+	}
+</style>
+
+<canvas id="can"></canvas>
+
+<script>
+const can = document.getElementById("can");
+const ctx = can.getContext("2d");
+
+let W, H;
+let nodes = [];
+let packets = [];
+let sparks = [];
+
+const NODE_COUNT = 90;
+const CONNECTION_DISTANCE = 230;
+
+function rr(min, max) {
+	return Math.random() * (max - min) + min;
+}
+
+function resize() {
+	W = window.innerWidth;
+	H = window.innerHeight;
+
+	can.width = W * devicePixelRatio;
+	can.height = H * devicePixelRatio;
+
+	ctx.setTransform(
+		devicePixelRatio, 0,
+		0, devicePixelRatio,
+		0, 0
+	);
+
+	nodes = [];
+
+	for (let i = 0; i < NODE_COUNT; i++) {
+		nodes.push(new Node());
+	}
+}
+
+
+/* =========================================================
+   UNHINGED NODE
+========================================================= */
+
+class Node {
+
+	constructor() {
+
+		this.x = rr(0, W);
+		this.y = rr(0, H);
+
+		this.vx = rr(-0.35, 0.35);
+		this.vy = rr(-0.35, 0.35);
+
+		this.size = rr(2, 5);
+
+		this.phase = rr(0, Math.PI * 2);
+
+		this.glitch = 0;
+
+		this.type = Math.floor(rr(0, 5));
+
+		this.connections = [];
+	}
+
+	update() {
+
+		this.phase += 0.025;
+
+		this.x += this.vx;
+		this.y += this.vy;
+
+		/*
+		 * Random violent correction.
+		 * The node has no idea where it is.
+		 */
+
+		if (Math.random() < 0.004) {
+			this.vx += rr(-1.5, 1.5);
+			this.vy += rr(-1.5, 1.5);
+			this.glitch = 15;
+		}
+
+		/*
+		 * Slowly calm down.
+		 */
+
+		this.vx *= 0.995;
+		this.vy *= 0.995;
+
+		/*
+		 * Keep them alive.
+		 */
+
+		if (this.x < -100) this.x = W + 100;
+		if (this.x > W + 100) this.x = -100;
+
+		if (this.y < -100) this.y = H + 100;
+		if (this.y > H + 100) this.y = -100;
+
+		if (this.glitch > 0)
+			this.glitch--;
+	}
+
+	draw() {
+
+		const pulse =
+			Math.sin(this.phase) * 0.5 + 0.5;
+
+		const r =
+			this.size +
+			pulse * 2 +
+			(this.glitch ? rr(0, 5) : 0);
+
+		/*
+		 * BIG FUCKING OUTER RING
+		 */
+
+		ctx.beginPath();
+
+		ctx.arc(
+			this.x,
+			this.y,
+			r * 4.5,
+			0,
+			Math.PI * 2
+		);
+
+		ctx.strokeStyle =
+			`rgba(170,210,220,${0.10 + pulse * 0.08})`;
+
+		ctx.lineWidth = 0.7;
+
+		ctx.stroke();
+
+
+		/*
+		 * SECONDARY RING
+		 */
+
+		ctx.beginPath();
+
+		ctx.arc(
+			this.x,
+			this.y,
+			r * 2.2,
+			0,
+			Math.PI * 2
+		);
+
+		ctx.strokeStyle =
+			`rgba(190,220,225,${0.18 + pulse * 0.12})`;
+
+		ctx.lineWidth = 1;
+
+		ctx.stroke();
+
+
+		/*
+		 * CORE
+		 */
+
+		ctx.beginPath();
+
+		ctx.arc(
+			this.x,
+			this.y,
+			r,
+			0,
+			Math.PI * 2
+		);
+
+		ctx.fillStyle =
+			`rgba(220,240,240,${0.65 + pulse * 0.3})`;
+
+		ctx.fill();
+
+
+		/*
+		 * CROSSHAIR
+		 */
+
+		const cross = r * 7;
+
+		ctx.beginPath();
+
+		ctx.moveTo(this.x - cross, this.y);
+		ctx.lineTo(this.x + cross, this.y);
+
+		ctx.moveTo(this.x, this.y - cross);
+		ctx.lineTo(this.x, this.y + cross);
+
+		ctx.strokeStyle =
+			`rgba(150,200,210,${0.08 + pulse * 0.1})`;
+
+		ctx.lineWidth = 0.5;
+
+		ctx.stroke();
+
+
+		/*
+		 * RANDOM ORBITING PARTICLES
+		 */
+
+		for (let i = 0; i < 3; i++) {
+
+			const angle =
+				this.phase * (i + 1) +
+				i * 2;
+
+			const distance =
+				r * (5 + i * 2);
+
+			const px =
+				this.x +
+				Math.cos(angle) * distance;
+
+			const py =
+				this.y +
+				Math.sin(angle) * distance;
+
+			ctx.beginPath();
+
+			ctx.arc(
+				px,
+				py,
+				0.8,
+				0,
+				Math.PI * 2
+			);
+
+			ctx.fillStyle =
+				"rgba(190,220,225,0.55)";
+
+			ctx.fill();
+		}
+
+
+		/*
+		 * GLITCH LINES
+		 */
+
+		if (this.glitch > 0) {
+
+			for (let i = 0; i < 5; i++) {
+
+				const length = rr(10, 50);
+
+				ctx.beginPath();
+
+				ctx.moveTo(
+					this.x + rr(-10, 10),
+					this.y + rr(-10, 10)
+				);
+
+				ctx.lineTo(
+					this.x + rr(-10, 10) + length,
+					this.y + rr(-10, 10)
+				);
+
+				ctx.strokeStyle =
+					"rgba(220,240,240,0.5)";
+
+				ctx.stroke();
+			}
+		}
+	}
+}
+
+
+/* =========================================================
+   CONNECTIONS
+========================================================= */
+
+function drawConnections() {
+
+	for (let i = 0; i < nodes.length; i++) {
+
+		const a = nodes[i];
+
+		for (let j = i + 1; j < nodes.length; j++) {
+
+			const b = nodes[j];
+
+			const dx = a.x - b.x;
+			const dy = a.y - b.y;
+
+			const distance =
+				Math.sqrt(dx * dx + dy * dy);
+
+			if (distance > CONNECTION_DISTANCE)
+				continue;
+
+			const strength =
+				1 - distance / CONNECTION_DISTANCE;
+
+			/*
+			 * Main connection
+			 */
+
+			ctx.beginPath();
+
+			ctx.moveTo(a.x, a.y);
+			ctx.lineTo(b.x, b.y);
+
+			ctx.strokeStyle =
+				`rgba(140,190,200,${strength * 0.32})`;
+
+			ctx.lineWidth =
+				strength * 1.5;
+
+			ctx.stroke();
+
+
+			/*
+			 * FUCKED-UP SECOND LINE
+			 */
+
+			if (strength > 0.55) {
+
+				const offset =
+					Math.sin(
+						performance.now() * 0.002 +
+						i
+					) * 4;
+
+				ctx.beginPath();
+
+				ctx.moveTo(
+					a.x + offset,
+					a.y
+				);
+
+				ctx.lineTo(
+					b.x - offset,
+					b.y
+				);
+
+				ctx.strokeStyle =
+					`rgba(180,220,225,${strength * 0.08})`;
+
+				ctx.stroke();
+			}
+
+
+			/*
+			 * Random packet
+			 */
+
+			if (
+				Math.random() < 0.0015 &&
+				packets.length < 20
+			) {
+				packets.push(
+					new Packet(a, b)
+				);
+			}
+		}
+	}
+}
+
+
+/* =========================================================
+   PACKETS
+========================================================= */
+
+class Packet {
+
+	constructor(a, b) {
+
+		this.a = a;
+		this.b = b;
+
+		this.t = 0;
+
+		this.speed =
+			rr(0.008, 0.025);
+
+		this.dead = false;
+	}
+
+	update() {
+
+		this.t += this.speed;
+
+		if (this.t >= 1)
+			this.dead = true;
+	}
+
+	draw() {
+
+		const x =
+			this.a.x +
+			(this.b.x - this.a.x) * this.t;
+
+		const y =
+			this.a.y +
+			(this.b.y - this.a.y) * this.t;
+
+
+		/*
+		 * packet body
+		 */
+
+		ctx.beginPath();
+
+		ctx.arc(
+			x,
+			y,
+			3,
+			0,
+			Math.PI * 2
+		);
+
+		ctx.fillStyle =
+			"rgba(230,255,255,0.9)";
+
+		ctx.fill();
+
+
+		/*
+		 * FUCKING LONG TRAIL
+		 */
+
+		ctx.beginPath();
+
+		ctx.moveTo(
+			x,
+			y
+		);
+
+		ctx.lineTo(
+			x -
+			(this.b.x - this.a.x) * 0.08,
+
+			y -
+			(this.b.y - this.a.y) * 0.08
+		);
+
+		ctx.strokeStyle =
+			"rgba(200,240,245,0.35)";
+
+		ctx.lineWidth = 1.5;
+
+		ctx.stroke();
+
+
+		/*
+		 * packet sparks
+		 */
+
+		if (Math.random() < 0.2) {
+
+			sparks.push(
+				new Spark(x, y)
+			);
+		}
+	}
+}
+
+
+/* =========================================================
+   SPARKS
+========================================================= */
+
+class Spark {
+
+	constructor(x, y) {
+
+		this.x = x;
+		this.y = y;
+
+		this.vx = rr(-1.5, 1.5);
+		this.vy = rr(-1.5, 1.5);
+
+		this.life = 1;
+	}
+
+	update() {
+
+		this.x += this.vx;
+		this.y += this.vy;
+
+		this.life -= 0.025;
+	}
+
+	draw() {
+
+		ctx.beginPath();
+
+		ctx.arc(
+			this.x,
+			this.y,
+			1,
+			0,
+			Math.PI * 2
+		);
+
+		ctx.fillStyle =
+			`rgba(200,235,240,${this.life})`;
+
+		ctx.fill();
+	}
+}
+
+
+/* =========================================================
+   RANDOM NUCLEAR EVENTS
+========================================================= */
+
+function randomEvent() {
+
+	if (Math.random() > 0.006)
+		return;
+
+	const n =
+		nodes[
+			Math.floor(
+				Math.random() * nodes.length
+			)
+		];
+
+	/*
+	 * EMP
+	 */
+
+	for (let i = 0; i < 15; i++) {
+
+		const angle =
+			Math.random() * Math.PI * 2;
+
+		const distance =
+			rr(10, 100);
+
+		sparks.push(
+			new Spark(
+				n.x +
+				Math.cos(angle) * distance,
+
+				n.y +
+				Math.sin(angle) * distance
+			)
+		);
+	}
+
+	n.glitch = 30;
+
+	n.vx += rr(-3, 3);
+	n.vy += rr(-3, 3);
+}
+
+
+/* =========================================================
+   LOOP
+========================================================= */
+
+function animate() {
+
+	ctx.clearRect(
+		0,
+		0,
+		W,
+		H
+	);
+
+
+	/*
+	 * CONNECTIONS FIRST
+	 */
+
+	drawConnections();
+
+
+	/*
+	 * NODES
+	 */
+
+	for (const node of nodes) {
+
+		node.update();
+		node.draw();
+	}
+
+
+	/*
+	 * PACKETS
+	 */
+
+	for (const packet of packets) {
+
+		packet.update();
+		packet.draw();
+	}
+
+	packets =
+		packets.filter(
+			p => !p.dead
+		);
+
+
+	/*
+	 * SPARKS
+	 */
+
+	for (const spark of sparks) {
+
+		spark.update();
+		spark.draw();
+	}
+
+	sparks =
+		sparks.filter(
+			s => s.life > 0
+		);
+
+
+	randomEvent();
+
+	requestAnimationFrame(
+		animate
+	);
+}
+
+
+window.addEventListener(
+	"resize",
+	resize
+);
+
+resize();
+animate();
+</script>
 
 </html>
