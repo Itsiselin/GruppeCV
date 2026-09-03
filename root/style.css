@@ -386,10 +386,14 @@ footer {
     margin-bottom: 22px;
 }
 .kartverket-img {
-    transform: scale(1.18);
+    transform: scale(1.5);
     height: 280px;
     object-fit: contain;
     transform-origin: center;
+}
+.project-image-wrap {
+    overflow: hidden;
+    border-radius: 12px;
 }
 
 .team-members-grid {
@@ -431,4 +435,56 @@ footer {
     color: #6b7280;
     margin: 0;
     line-height: 1.4;
+}
+
+@media (max-width: 1200px) {
+
+    main {
+        max-width: 1000px;
+        padding: 0 24px;
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .profile {
+        grid-template-columns: 260px 1fr;
+        gap: 40px;
+    }
+
+    .profile img {
+        height: 260px;
+    }
+
+    .profile-text h1 {
+        font-size: 40px;
+    }
+
+    .profile-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .project-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+    }
+
+    .project-card {
+        padding: 20px;
+    }
+
+    .project-card img {
+        height: 220px;
+    }
+
+    .kartverket-img {
+        height: 240px;
+        transform: scale(1.35);
+    }
+
+    .cv-section {
+        padding: 34px 36px;
+    }
 }
