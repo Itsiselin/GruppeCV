@@ -384,19 +384,17 @@ footer {
 .contact-option {
     display: flex;
     align-items: center;
-    justify-content: center;
-    width: 46px;
-    height: 46px;
+    gap: 8px;
+    justify-content: flex-start;
+    width: auto;
+    height: auto;
     color: #2563eb;
     text-decoration: none;
-    border: 1px solid #dbe5f4;
-    border-radius: 50%;
     transition: color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
 }
 
 .contact-option:hover {
-    color: #ffffff;
-    background-color: #2563eb;
+    color: #2563eb;
     transform: translateY(-2px);
 }
 
@@ -409,6 +407,17 @@ footer {
     width: 25px;
     height: 25px;
     object-fit: contain;
+}
+
+.contact-label {
+    color: #172033;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.contact-option:hover .contact-label {
+    color: #2563eb;
 }
 
 .paper-plane {
