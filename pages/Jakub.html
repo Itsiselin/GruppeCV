@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../root/style.css">
-    <title>Iselin Rolness | Gruppe CV</title>
+    <title>Jakub Broz | Gruppe CV</title>
 </head>
 
 <body>
@@ -19,10 +19,10 @@
 
         <section class="profile">
 
-            <img src="../images/midlertidigbilde.jpg" alt="Iselin Rolness">
+            <img src="../images/portraits/jakub-sq.jpg" alt="Iselin Rolness">
 
             <div class="profile-text">
-
+				<h1>Jakub Broz</h1>
                 <p class="study">IT og informasjonssystemer</p>
 
                 <h1></h1>
@@ -32,59 +32,127 @@
                 </p>
 
                 <div class="skills">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>JavaScript</span>
-                    
-                </div>
+					<span>Fullstack-utvikling</span>
+					<span>Backend & API-er</span>
+					<span>ESP32 & IoT</span>
+					<span>Linux & Servere</span>
+					<span>GIS & Geodata</span>
+					<span>Integrerte systemer</span>
+					
+				</div>
+				<br>
+				<div class="links">
+					<a href="https://www.linkedin.com/in/jakub-broz-5860bb350/">
+						<img src="../images/linkedin.png" alt="LinkedIn">
+						<span>LinkedIn</span>
+					</a>
+
+					<a href="https://github.com/J6kub">
+						<img src="../images/github.svg" alt="GitHub">
+						<span>GitHub</span>
+					</a>
+				</div>
 
             </div>
 
         </section>
+        
+       
 
 
         <section class="profile-content">
-
+			<div class="animated-border"
+			 style="
+				--border-color: #ff6600;
+				--border-speed: 4s;
+				--border-offset: 120deg;
+			 ">
             <div class="profile-card">
 
                 <h2>Om meg</h2>
 
-                <p>
-                    .
-                </p>
+                <p> Som alle de andre er jeg student i IT og informasjonssystemer, og liker spesielt å bygge ting som faktisk fungerer utenfor selve koden. </p>
 
-                <p>
-                    
-                </p>
+<p> Jeg liker å jobbe med alt fra backend og webutvikling til fysiske systemer, og har blant annet jobbet med egne infotainment-løsninger, ESP32, IoT, sensorer og 3D-printing. Jeg synes det er ekstra gøy når programvare og fysisk teknologi må spille sammen. </p>
 
-            </div>
+            </div></div>
 
+				<div class="animated-border"
+				 style="
+					--border-color: #0800fc;
+					--border-speed: 10s;
+					--border-offset: 0deg;
+				 ">
+            <div class="profile-card" style="height:100%">
+				
+					<h2>Utdanning</h2>
 
-            <div class="profile-card">
-
-                <h2>Utdanning</h2>
-
-                <p>
-                    <strong>Bachelor i IT og informasjonssystemer</strong><br>
-                    Universitetet i Agder<br>
-                    2024 – 2027
-                </p>
-
-            </div>
-
-        </section>
-
-
-        <section class="cv-section">
-
-            <h2>Prosjekter</h2>
-
-            <p>
-                Her kan du vise noen utvalgte prosjekter fra studiet,
-                med en kort beskrivelse av hva du jobbet med og hvilken rolle du hadde.
-            </p>
+					<p>
+						<strong>Bachelor i IT og informasjonssystemer</strong><br>
+						Universitetet i Agder<br>
+						2024 – 2027
+					</p>
+					<p>
+						<strong>Livets harde skole</strong><br>
+						Praktisk erfaring<br>
+						2003 – d.d.
+					</p>
+				</div>
+			</div>
 
         </section>
+
+
+        <section class="cv-section projects">
+
+			<h2>Prosjekter</h2>
+
+			<div class="project-grid">
+
+				<article class="project-card">
+					<div class="project-number">01</div>
+
+					<h3>Kartverket Register</h3>
+
+					<p>
+						Prosjekt for IS-200, Vi fikk oppdrag fra kartverket å lage et register for luftfartshindre. Der fikk vi lære om GIS teknologier og vi fikk velge fritt hva slags teknologi vi bruker for utvikling.
+					</p>
+
+					<a href="https://github.com/HenellTT/KartverketRegister" target="_blank" rel="noopener noreferrer">
+						Se på GitHub →
+					</a>
+				</article>
+
+
+				<article class="project-card">
+					<div class="project-number">02</div>
+
+					<h3>Bunker Kart</h3>
+
+					<p>Prosjekt i IS-218 hvor vi lærte om innhenting, visualisering og behandling av GIS-data. Vi jobbet blant annet med å manipulere og sette sammen data fra ulike kilder. Som prosjekt lagde vi et kart over alle tilfluktsrom i Norge, med integrasjon mot Statens vegvesens API for ruteplanlegging.
+					</p>
+
+					<a href="https://github.com/Arildb88/IS-218-GIS" target="_blank" rel="noopener noreferrer">
+						Se på GitHub →
+					</a>
+				</article>
+
+
+				<article class="project-card">
+					<div class="project-number">03</div>
+
+					<h3>Infotainment E39</h3>
+
+					<p>Som sideprosjekt utvikler jeg et custom infotainmentsystem til en veteran bil, basert på en Linux-minipc og flere ESP32-noder for sensorer og datainnsamling. Systemet bruker PostgreSQL, Grafana, FastAPI og Qt. Gjennom prosjektet har jeg fått erfaring med lydsystemer, Linux, mikrokontrollere, sensorer og integrasjon mellom hardware og software.</p>
+
+					<a href="https://github.com/J6kub/e39-infotainment-master" target="_blank" rel="noopener noreferrer">
+						Se på GitHub →
+					</a>
+				</article>
+
+			</div>
+
+		</section>
 
     </main>
 
@@ -94,5 +162,888 @@
     </footer>
 
 </body>
+
+<style>
+    body {
+        background: none !important;
+        background-color: rgba(0,0,0,0) !important;
+        overflow-x: hidden;
+    }
+
+    #can {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: -10;
+        pointer-events: none;
+    }
+
+    .links {
+        display: flex;
+        gap: 10px;
+    }
+
+    .links a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+
+        width: 120px;
+        height: 50px;
+        box-sizing: border-box;
+
+        text-decoration: none;
+        border-radius: 10px;
+        padding: 10px;
+
+        background-color: orange;
+        color: white;
+
+        transition: transform 0.2s;
+    }
+
+    .links a:hover {
+        transform: scale(1.1);
+    }
+
+    .links a img {
+        width: 25px;
+        height: 25px;
+        object-fit: contain;
+        max-width: 100%;
+        max-height: 100%;
+        flex-shrink: 0;
+    }
+	/* =========================
+	   PROJECTS
+	========================= */
+
+	.projects {
+		margin-top: 40px;
+	}
+
+	.projects > h2 {
+		font-size: 2rem;
+		margin-bottom: 25px;
+	}
+
+
+	/* Grid */
+
+	.project-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+		gap: 20px;
+	}
+
+
+	/* Card */
+
+	.project-card {
+		position: relative;
+
+		padding: 28px;
+		min-height: 250px;
+
+		border-radius: 18px;
+
+		background: rgba(255, 255, 255, 0.07);
+		border: 1px solid rgba(255, 255, 255, 0.15);
+
+		backdrop-filter: blur(10px);
+
+		overflow: hidden;
+
+		transition:
+			transform 0.25s ease,
+			border-color 0.25s ease,
+			box-shadow 0.25s ease;
+	}
+
+
+	/* Subtle glow */
+
+	.project-card::before {
+		content: "";
+
+		position: absolute;
+
+		width: 140px;
+		height: 140px;
+
+		top: -70px;
+		right: -70px;
+
+		border-radius: 50%;
+
+		background: orange;
+
+		opacity: 0.12;
+
+		filter: blur(35px);
+
+		transition: opacity 0.25s ease;
+	}
+
+
+	/* Hover */
+
+	.project-card:hover {
+		transform: translateY(-7px);
+
+		border-color: orange;
+
+		box-shadow:
+			0 10px 30px rgba(0, 0, 0, 0.25),
+			0 0 25px rgba(255, 165, 0, 0.12);
+	}
+
+	.project-card:hover::before {
+		opacity: 0.25;
+	}
+
+
+	/* Project number */
+
+	.project-number {
+		font-family: monospace;
+
+		font-size: 0.8rem;
+		font-weight: bold;
+
+		color: orange;
+
+		margin-bottom: 12px;
+
+		opacity: 0.8;
+	}
+
+
+	/* Title */
+
+	.project-card h3 {
+		margin: 0 0 12px;
+
+		font-size: 1.35rem;
+	}
+
+
+	/* Description */
+
+	.project-card p {
+		margin: 0 0 25px;
+
+		line-height: 1.6;
+
+		opacity: 0.8;
+	}
+
+
+	/* GitHub link */
+
+	.project-card a {
+		display: inline-flex;
+		align-items: center;
+
+		padding: 9px 14px;
+
+		border-radius: 9px;
+
+		background: orange;
+		color: white;
+
+		text-decoration: none;
+		font-weight: 600;
+
+		transition:
+			transform 0.2s ease,
+			background 0.2s ease;
+	}
+
+	.project-card a:hover {
+		transform: translateX(5px);
+		background: #ffb52e;
+	}
+	
+	.profile-card {
+    position: relative;
+
+    background-color: white;
+    padding: 32px;
+    border-radius: 16px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+}
+
+.animated-border {
+    --border-color: orange;
+    --border-speed: 4s;
+    --border-offset: 0deg;
+
+    position: relative;
+    padding: 1px;
+    border-radius: 17px;
+
+    background: conic-gradient(
+        from var(--border-offset),
+        transparent 0deg,
+        transparent 340deg,
+        color-mix(in srgb, var(--border-color) 10%, transparent) 345deg,
+        var(--border-color) 350deg,
+        color-mix(in srgb, var(--border-color) 10%, transparent) 355deg,
+        transparent 360deg
+    );
+
+    animation: border-spin var(--border-speed) linear infinite;
+}
+
+@property --border-offset {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@keyframes border-spin {
+    to {
+        --border-offset: 360deg;
+    }
+}
+	
+}</style>
+
+<canvas id="can"></canvas>
+
+<script>
+const can = document.getElementById("can");
+const ctx = can.getContext("2d");
+
+let W, H;
+let nodes = [];
+let packets = [];
+let sparks = [];
+
+const NODE_COUNT = 90;
+const CONNECTION_DISTANCE = 230;
+
+function rr(min, max) {
+	return Math.random() * (max - min) + min;
+}
+
+function resize() {
+	W = window.innerWidth;
+	H = window.innerHeight;
+
+	can.width = W * devicePixelRatio;
+	can.height = H * devicePixelRatio;
+
+	ctx.setTransform(
+		devicePixelRatio, 0,
+		0, devicePixelRatio,
+		0, 0
+	);
+
+	nodes = [];
+
+	for (let i = 0; i < NODE_COUNT; i++) {
+		nodes.push(new Node());
+	}
+}
+
+
+/* =========================================================
+   UNHINGED NODE
+========================================================= */
+
+class Node {
+
+	constructor() {
+
+		this.x = rr(0, W);
+		this.y = rr(0, H);
+
+		this.vx = rr(-0.35, 0.35);
+		this.vy = rr(-0.35, 0.35);
+
+		this.size = rr(2, 5);
+
+		this.phase = rr(0, Math.PI * 2);
+
+		this.glitch = 0;
+
+		this.type = Math.floor(rr(0, 5));
+
+		this.connections = [];
+	}
+
+	update() {
+
+		this.phase += 0.025;
+
+		this.x += this.vx;
+		this.y += this.vy;
+
+		/*
+		 * Random violent correction.
+		 * The node has no idea where it is.
+		 */
+
+		if (Math.random() < 0.004) {
+			this.vx += rr(-1.5, 1.5);
+			this.vy += rr(-1.5, 1.5);
+			this.glitch = 15;
+		}
+
+		/*
+		 * Slowly calm down.
+		 */
+
+		this.vx *= 0.995;
+		this.vy *= 0.995;
+
+		/*
+		 * Keep them alive.
+		 */
+
+		if (this.x < -100) this.x = W + 100;
+		if (this.x > W + 100) this.x = -100;
+
+		if (this.y < -100) this.y = H + 100;
+		if (this.y > H + 100) this.y = -100;
+
+		if (this.glitch > 0)
+			this.glitch--;
+	}
+
+	draw() {
+
+		const pulse =
+			Math.sin(this.phase) * 0.5 + 0.5;
+
+		const r =
+			this.size +
+			pulse * 2 +
+			(this.glitch ? rr(0, 5) : 0);
+
+		/*
+		 * BIG FUCKING OUTER RING
+		 */
+
+		ctx.beginPath();
+
+		ctx.arc(
+			this.x,
+			this.y,
+			r * 4.5,
+			0,
+			Math.PI * 2
+		);
+
+		ctx.strokeStyle =
+			`rgba(170,210,220,${0.10 + pulse * 0.08})`;
+
+		ctx.lineWidth = 0.7;
+
+		ctx.stroke();
+
+
+		/*
+		 * SECONDARY RING
+		 */
+
+		ctx.beginPath();
+
+		ctx.arc(
+			this.x,
+			this.y,
+			r * 2.2,
+			0,
+			Math.PI * 2
+		);
+
+		ctx.strokeStyle =
+			`rgba(190,220,225,${0.18 + pulse * 0.12})`;
+
+		ctx.lineWidth = 1;
+
+		ctx.stroke();
+
+
+		/*
+		 * CORE
+		 */
+
+		ctx.beginPath();
+
+		ctx.arc(
+			this.x,
+			this.y,
+			r,
+			0,
+			Math.PI * 2
+		);
+
+		ctx.fillStyle =
+			`rgba(220,240,240,${0.65 + pulse * 0.3})`;
+
+		ctx.fill();
+
+
+		/*
+		 * CROSSHAIR
+		 */
+
+		const cross = r * 7;
+
+		ctx.beginPath();
+
+		ctx.moveTo(this.x - cross, this.y);
+		ctx.lineTo(this.x + cross, this.y);
+
+		ctx.moveTo(this.x, this.y - cross);
+		ctx.lineTo(this.x, this.y + cross);
+
+		ctx.strokeStyle =
+			`rgba(150,200,210,${0.08 + pulse * 0.1})`;
+
+		ctx.lineWidth = 0.5;
+
+		ctx.stroke();
+
+
+		/*
+		 * RANDOM ORBITING PARTICLES
+		 */
+
+		for (let i = 0; i < 3; i++) {
+
+			const angle =
+				this.phase * (i + 1) +
+				i * 2;
+
+			const distance =
+				r * (5 + i * 2);
+
+			const px =
+				this.x +
+				Math.cos(angle) * distance;
+
+			const py =
+				this.y +
+				Math.sin(angle) * distance;
+
+			ctx.beginPath();
+
+			ctx.arc(
+				px,
+				py,
+				0.8,
+				0,
+				Math.PI * 2
+			);
+
+			ctx.fillStyle =
+				"rgba(190,220,225,0.55)";
+
+			ctx.fill();
+		}
+
+
+		/*
+		 * GLITCH LINES
+		 */
+
+		if (this.glitch > 0) {
+
+			for (let i = 0; i < 5; i++) {
+
+				const length = rr(10, 50);
+
+				ctx.beginPath();
+
+				ctx.moveTo(
+					this.x + rr(-10, 10),
+					this.y + rr(-10, 10)
+				);
+
+				ctx.lineTo(
+					this.x + rr(-10, 10) + length,
+					this.y + rr(-10, 10)
+				);
+
+				ctx.strokeStyle =
+					"rgba(220,240,240,0.5)";
+
+				ctx.stroke();
+			}
+		}
+	}
+}
+
+
+/* =========================================================
+   CONNECTIONS
+========================================================= */
+
+function drawConnections() {
+
+	for (let i = 0; i < nodes.length; i++) {
+
+		const a = nodes[i];
+
+		for (let j = i + 1; j < nodes.length; j++) {
+
+			const b = nodes[j];
+
+			const dx = a.x - b.x;
+			const dy = a.y - b.y;
+
+			const distance =
+				Math.sqrt(dx * dx + dy * dy);
+
+			if (distance > CONNECTION_DISTANCE)
+				continue;
+
+			const strength =
+				1 - distance / CONNECTION_DISTANCE;
+
+			/*
+			 * Main connection
+			 */
+
+			ctx.beginPath();
+
+			ctx.moveTo(a.x, a.y);
+			ctx.lineTo(b.x, b.y);
+
+			ctx.strokeStyle =
+				`rgba(140,190,200,${strength * 0.32})`;
+
+			ctx.lineWidth =
+				strength * 1.5;
+
+			ctx.stroke();
+
+
+			/*
+			 * FUCKED-UP SECOND LINE
+			 */
+
+			if (strength > 0.55) {
+
+				const offset =
+					Math.sin(
+						performance.now() * 0.002 +
+						i
+					) * 4;
+
+				ctx.beginPath();
+
+				ctx.moveTo(
+					a.x + offset,
+					a.y
+				);
+
+				ctx.lineTo(
+					b.x - offset,
+					b.y
+				);
+
+				ctx.strokeStyle =
+					`rgba(180,220,225,${strength * 0.08})`;
+
+				ctx.stroke();
+			}
+
+
+			/*
+			 * Random packet
+			 */
+
+			if (
+				Math.random() < 0.0015 &&
+				packets.length < 20
+			) {
+				packets.push(
+					new Packet(a, b)
+				);
+			}
+		}
+	}
+}
+
+
+/* =========================================================
+   PACKETS
+========================================================= */
+
+class Packet {
+
+	constructor(a, b) {
+
+		this.a = a;
+		this.b = b;
+
+		this.t = 0;
+
+		this.speed =
+			rr(0.008, 0.025);
+
+		this.dead = false;
+	}
+
+	update() {
+
+		this.t += this.speed;
+
+		if (this.t >= 1)
+			this.dead = true;
+	}
+
+	draw() {
+
+		const x =
+			this.a.x +
+			(this.b.x - this.a.x) * this.t;
+
+		const y =
+			this.a.y +
+			(this.b.y - this.a.y) * this.t;
+
+
+		/*
+		 * packet body
+		 */
+
+		ctx.beginPath();
+
+		ctx.arc(
+			x,
+			y,
+			3,
+			0,
+			Math.PI * 2
+		);
+
+		ctx.fillStyle =
+			"rgba(230,255,255,0.9)";
+
+		ctx.fill();
+
+
+		/*
+		 * FUCKING LONG TRAIL
+		 */
+
+		ctx.beginPath();
+
+		ctx.moveTo(
+			x,
+			y
+		);
+
+		ctx.lineTo(
+			x -
+			(this.b.x - this.a.x) * 0.08,
+
+			y -
+			(this.b.y - this.a.y) * 0.08
+		);
+
+		ctx.strokeStyle =
+			"rgba(200,240,245,0.35)";
+
+		ctx.lineWidth = 1.5;
+
+		ctx.stroke();
+
+
+		/*
+		 * packet sparks
+		 */
+
+		if (Math.random() < 0.2) {
+
+			sparks.push(
+				new Spark(x, y)
+			);
+		}
+	}
+}
+
+
+/* =========================================================
+   SPARKS
+========================================================= */
+
+class Spark {
+
+	constructor(x, y) {
+
+		this.x = x;
+		this.y = y;
+
+		this.vx = rr(-1.5, 1.5);
+		this.vy = rr(-1.5, 1.5);
+
+		this.life = 1;
+	}
+
+	update() {
+
+		this.x += this.vx;
+		this.y += this.vy;
+
+		this.life -= 0.025;
+	}
+
+	draw() {
+
+		ctx.beginPath();
+
+		ctx.arc(
+			this.x,
+			this.y,
+			1,
+			0,
+			Math.PI * 2
+		);
+
+		ctx.fillStyle =
+			`rgba(200,235,240,${this.life})`;
+
+		ctx.fill();
+	}
+}
+
+
+/* =========================================================
+   RANDOM NUCLEAR EVENTS
+========================================================= */
+
+function randomEvent() {
+
+	if (Math.random() > 0.006)
+		return;
+
+	const n =
+		nodes[
+			Math.floor(
+				Math.random() * nodes.length
+			)
+		];
+
+	/*
+	 * EMP
+	 */
+
+	for (let i = 0; i < 15; i++) {
+
+		const angle =
+			Math.random() * Math.PI * 2;
+
+		const distance =
+			rr(10, 100);
+
+		sparks.push(
+			new Spark(
+				n.x +
+				Math.cos(angle) * distance,
+
+				n.y +
+				Math.sin(angle) * distance
+			)
+		);
+	}
+
+	n.glitch = 30;
+
+	n.vx += rr(-3, 3);
+	n.vy += rr(-3, 3);
+}
+
+
+/* =========================================================
+   LOOP
+========================================================= */
+
+function animate() {
+
+	ctx.clearRect(
+		0,
+		0,
+		W,
+		H
+	);
+
+
+	/*
+	 * CONNECTIONS FIRST
+	 */
+
+	drawConnections();
+
+
+	/*
+	 * NODES
+	 */
+
+	for (const node of nodes) {
+
+		node.update();
+		node.draw();
+	}
+
+
+	/*
+	 * PACKETS
+	 */
+
+	for (const packet of packets) {
+
+		packet.update();
+		packet.draw();
+	}
+
+	packets =
+		packets.filter(
+			p => !p.dead
+		);
+
+
+	/*
+	 * SPARKS
+	 */
+
+	for (const spark of sparks) {
+
+		spark.update();
+		spark.draw();
+	}
+
+	sparks =
+		sparks.filter(
+			s => s.life > 0
+		);
+
+
+	randomEvent();
+
+	requestAnimationFrame(
+		animate
+	);
+}
+
+
+window.addEventListener(
+	"resize",
+	resize
+);
+
+resize();
+animate();
+</script>
 
 </html>
