@@ -17,7 +17,7 @@ body {
 }
 
 .hanna-page {
-    background: #ffffff;
+    background: linear-gradient(180deg, #f4f5f7 0%, #eef3ff 100%);
 }
 
 nav {
