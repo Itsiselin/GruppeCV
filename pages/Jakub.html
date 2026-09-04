@@ -11,8 +11,10 @@
 <body>
 
     <nav aria-label="Hovednavigasjon">
+		<img class="nav-logo" src="../images/logo-ShiftIT.jpeg" alt="ShiftIT">
         <a href="../index.html">Hjem</a>
         <a href="../index.html#om-oss">Om oss</a>
+		<a href="../index.html#contact">Kontakt</a>
     </nav>
 
     <main>
@@ -412,7 +414,7 @@
     }
 }
 	
-}</style>
+</style>
 
 <canvas id="can"></canvas>
 
@@ -527,9 +529,7 @@ class Node {
 			pulse * 2 +
 			(this.glitch ? rr(0, 5) : 0);
 
-		/*
-		 * BIG OUTER RING
-		 */
+		
 
 		ctx.beginPath();
 
@@ -727,9 +727,7 @@ function drawConnections() {
 			ctx.stroke();
 
 
-			/*
-			 *  SECOND LINE
-			 */
+			
 
 			if (strength > 0.55) {
 
@@ -833,10 +831,7 @@ class Packet {
 		ctx.fill();
 
 
-		/*
-		 * LONG TRAIL
-		 */
-
+		
 		ctx.beginPath();
 
 		ctx.moveTo(
