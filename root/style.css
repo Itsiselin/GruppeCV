@@ -17,10 +17,11 @@ body {
 }
 
 .hanna-page {
-    background: #ffffff;
+    background: linear-gradient(180deg, #f4f5f7 0%, #eef3ff 100%);
 }
 
 nav {
+    position: relative;
     display: flex;
     justify-content: center;
     gap: 35px;
@@ -31,6 +32,16 @@ nav {
     z-index: 10;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
     
+}
+
+.nav-logo {
+    position: absolute;
+    left: 22px;
+    top: 50%;
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+    transform: translateY(-50%);
 }
 
 nav a {
