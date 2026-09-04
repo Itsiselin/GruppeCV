@@ -304,12 +304,29 @@ footer {
     align-items: center;
 }
 
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    text-decoration: none;
+    color: #172033;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.social-links a:visited {
+    color: #172033;
+}
+
+.social-links a:hover {
+    color: #2563eb;
+}
+
 .social-links img {
     width: 36px;
     height: 36px;
     object-fit: contain;
 }
-
 .profile-content {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -425,7 +442,10 @@ footer {
     overflow: hidden;
     border-radius: 12px;
 }
-
+.profile-card ul,
+.profile-card li {
+    color: #6b7280;
+}
 .contact-section {
     position: relative;
     max-width: 1100px;
