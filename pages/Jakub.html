@@ -497,14 +497,14 @@ class Node {
 		}
 
 		/*
-		 * Slowly calm down.
+		 * Slowly 
 		 */
 
 		this.vx *= 0.995;
 		this.vy *= 0.995;
 
 		/*
-		 * Keep them alive.
+		 * Wrap around the screen edges.
 		 */
 
 		if (this.x < -100) this.x = W + 100;
@@ -528,7 +528,7 @@ class Node {
 			(this.glitch ? rr(0, 5) : 0);
 
 		/*
-		 * BIG FUCKING OUTER RING
+		 * BIG OUTER RING
 		 */
 
 		ctx.beginPath();
@@ -728,7 +728,7 @@ function drawConnections() {
 
 
 			/*
-			 * FUCKED-UP SECOND LINE
+			 *  SECOND LINE
 			 */
 
 			if (strength > 0.55) {
@@ -834,7 +834,7 @@ class Packet {
 
 
 		/*
-		 * FUCKING LONG TRAIL
+		 * LONG TRAIL
 		 */
 
 		ctx.beginPath();

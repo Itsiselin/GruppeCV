@@ -100,7 +100,7 @@ main {
     z-index: 2;
     font-size: 45px;
     font-weight: bold;
-    margin-top: 30px;
+    margin-top: 330px;
 }
 
 .hero-banner #group-members-bg {
@@ -286,12 +286,25 @@ footer {
     font-size: 14px;
     font-weight: 600;
 }
+.social-links {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.social-links img {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+}
 
 .profile-content {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 22px;
     margin-bottom: 50px;
+    
 }
 
 .profile-card {
