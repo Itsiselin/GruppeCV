@@ -11,12 +11,17 @@ html {
 body {
     font-family: Arial, sans-serif;
     background: linear-gradient(180deg, #f4f5f7 0%, #eef3ff 100%);
-    color: #1f2937;
+    color: #1e3566;
     line-height: 1.6;
-     overflow-x: hidden;
+    overflow-x: hidden;
+}
+
+.hanna-page {
+    background: linear-gradient(180deg, #f4f5f7 0%, #eef3ff 100%);
 }
 
 nav {
+    position: relative;
     display: flex;
     justify-content: center;
     gap: 35px;
@@ -26,13 +31,24 @@ nav {
     top: 0;
     z-index: 10;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-    
+}
+
+.nav-logo {
+    position: absolute;
+    left: 22px;
+    top: 50%;
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+    transform: translateY(-50%);
 }
 
 nav a {
     color: #172033;
     text-decoration: none;
     font-weight: bold;
+    position: relative;
+    left: 4px;
     transition: color 0.2s ease;
 }
 
@@ -41,46 +57,34 @@ nav a:hover {
 }
 
 main {
-   max-width: 1100px;
+    max-width: 1100px;
     margin: 60px auto 40px;
     padding: 0 20px;
 }
 
 .page-hero {
-    width: 1500px;
+    width: 100%;
+    max-width: 1500px;
     margin: 0 auto;
-    
 }
 
 .hero-banner {
-    min-height: 500px; 
+    min-height: 500px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     place-items: center;
-    background-image: url('../images/gruppebildet.jpg');
+    background-image: url('../images/gruppebilde2.JPG');
     background-size: cover;
-    background-position:center;
+    background-position: center;
     color: white;
     font-size: 48px;
     font-weight: bold;
     background-repeat: no-repeat;
     position: relative;
     padding-top: 20px;
-    
 }
-
-
-
-.hero-banner::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.35);
-    z-index: 0;
-}
-
 
 .hero-banner::after {
     content: "";
@@ -102,14 +106,14 @@ main {
     z-index: 1;
 }
 
-
-.hero-banner > span {
+.hero-banner #gruppenavn {
     position: relative;
     z-index: 2;
     font-size: 45px;
     font-weight: bold;
-    margin-top: 300px;
+    margin-top: 330px;
 }
+
 .hero-banner #group-members-bg {
     display: flex;
     flex-direction: row;
@@ -143,7 +147,7 @@ main {
 .team-section {
     margin-bottom: 40px;
     width: 100%;
-    }
+}
 
 .team-section > h2 {
     text-align: center;
@@ -293,12 +297,42 @@ footer {
     font-size: 14px;
     font-weight: 600;
 }
+.social-links {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+    align-items: center;
+}
 
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    text-decoration: none;
+    color: #172033;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.social-links a:visited {
+    color: #172033;
+}
+
+.social-links a:hover {
+    color: #2563eb;
+}
+
+.social-links img {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+}
 .profile-content {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 22px;
     margin-bottom: 50px;
+    
 }
 
 .profile-card {
@@ -345,6 +379,163 @@ footer {
     max-width: 800px;
 }
 
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 28px;
+}
+
+.project-card {
+    background-color: #f8faff;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    padding: 24px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(23, 32, 51, 0.08);
+}
+
+.project-card h3 {
+    color: #172033;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 18px;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+}
+
+.project-tags span {
+    background-color: #eef2f8;
+    color: #172033;
+    padding: 5px 9px;
+    border-radius: 7px;
+    font-size: 12px;
+    font-weight: 600;
+}
+.project-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    border-radius: 12px;
+    margin-bottom: 22px;
+}
+.kartverket-img {
+    transform: scale(1.5);
+    height: 280px;
+    object-fit: contain;
+    transform-origin: center;
+}
+.project-image-wrap {
+    overflow: hidden;
+    border-radius: 12px;
+}
+.profile-card ul,
+.profile-card li {
+    color: #6b7280;
+}
+.contact-section {
+    position: relative;
+    max-width: 1100px;
+    margin: 0 auto 40px;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.contact-section h2 {
+    color: #172033;
+    font-size: 26px;
+    margin-bottom: 8px;
+    text-align: center;
+    width: 100%;
+}
+
+.contact-section > p {
+    color: #6b7280;
+    margin-bottom: 22px;
+    text-align: center;
+    width: 100%;
+}
+
+.contact-options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+}
+
+.contact-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: flex-start;
+    width: auto;
+    height: auto;
+    color: #2563eb;
+    text-decoration: none;
+    transition: color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
+}
+
+.contact-option:hover {
+    color: #2563eb;
+    transform: translateY(-2px);
+}
+
+.contact-icon {
+    font-size: 25px;
+    line-height: 1;
+}
+
+.contact-icon-image {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+}
+
+.contact-label {
+    color: #172033;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.contact-option:hover .contact-label {
+    color: #2563eb;
+}
+
+.paper-plane {
+    position: absolute;
+    right: 18px;
+    bottom: 0;
+    width: clamp(150px, 22vw, 260px);
+    height: auto;
+    pointer-events: none;
+}
+
+@media (max-width: 700px) {
+    .contact-options {
+        gap: 14px;
+    }
+
+    .paper-plane {
+        right: 8px;
+        width: 150px;
+    }
+}
+
 .team-members-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -384,4 +575,56 @@ footer {
     color: #6b7280;
     margin: 0;
     line-height: 1.4;
+}
+
+@media (max-width: 1200px) {
+
+    main {
+        max-width: 1000px;
+        padding: 0 24px;
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .profile {
+        grid-template-columns: 260px 1fr;
+        gap: 40px;
+    }
+
+    .profile img {
+        height: 260px;
+    }
+
+    .profile-text h1 {
+        font-size: 40px;
+    }
+
+    .profile-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .project-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+    }
+
+    .project-card {
+        padding: 20px;
+    }
+
+    .project-card img {
+        height: 220px;
+    }
+
+    .kartverket-img {
+        height: 240px;
+        transform: scale(1.35);
+    }
+
+    .cv-section {
+        padding: 34px 36px;
+    }
 }

@@ -3,19 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gruppe CV</title>
+    <title>ShiftIT</title>
+    <link rel="icon" type="image/jpeg" href="images/logo-ShiftIT.jpeg?v=7">
+    <link rel="shortcut icon" type="image/jpeg" href="images/logo-ShiftIT.jpeg?v=7">
+    <link rel="apple-touch-icon" href="images/logo-ShiftIT.jpeg?v=7">
     <link rel="stylesheet" href="root/style.css">
 </head>
 <body id="hjem">
 
     <nav aria-label="Hovednavigasjon">
+        <img class="nav-logo" src="images/logo-ShiftIT.jpeg" alt="ShiftIT">
         <a href="#hjem">Hjem</a>
         <a href="#om-oss">Om oss</a>
+        <a href="#contact">Kontakt</a>
     </nav>
 
     <section class="page-hero">
         <div class="hero-banner" aria-label="Gruppe CV">
-            <span id="gruppenavn">SHiFT</span>
+            <span id="gruppenavn">ShiftIT</span>
 
             <ul id="group-members-bg">
                 <li>Jakub</li>
@@ -32,10 +37,29 @@
 
         <section class="welcome-section">
             <h2>Velkommen</h2>
-            <p>Vi er en gruppe studenter som presenterer våre erfaringer, ferdigheter og utdanning på denne nettsiden.</p>
+        
+            <p>
+                Vi er fem IT-studenter med kompetanse innen frontend, design, 
+                brukeropplevelse, testing, programmering og problemløsning. 
+                Sammen kombinerer vi kreativitet, teknisk forståelse og ulike erfaringer 
+                for å utvikle brukervennlige og gode digitale løsninger.
+            </p>
+        
+            <p>
+                Vi som grupper er åpne for offentlige og private virksomheter og vi ønsker gjerne å samarbeide med en bedrift som har et konkret problem eller et behov vi kan være med å løse. 
+Vi som gruppe har et høyt, men realistisk ambisjonsnivå. Vi ønsker å kunne levere en bra, solid og brukervennlig løsning. 
+
+        </section>
+        <section style="max-width: 800px; margin: 40px auto; padding: 0 20px;">
+            <iframe width="100%" height="450" 
+                src="https://www.youtube-nocookie.com/embed/MYUvL6rIDRw?si=BD4aIZhxPsMnX1Lg" 
+                title="ShiftIT presentasjon" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen></iframe>
         </section>
 
-       
         <section id="om-oss" class="team-section">
             <h2>Om oss</h2>
             <div class="team-grid">
@@ -56,29 +80,29 @@
                     </div>
                     <div class="team-card__content">
                         <h3>Iselin</h3>
-                        <p>Student med interesse for programmering og design.</p>
+                        <p>Student med interesse for UX-design, prototyping og frontend-utvikling.</p>
                         <a href="pages/Iselin.html">Se CV</a>
                     </div>
                 </article>
 
                 <article class="team-card">
                     <div class="team-card__image-wrap">
-                        <img class="team-card__image" src="images/portraits/ellen.jpg" alt="Ellen">
+                        <img class="team-card__image" src="images/portraits/ellen-sq.jpg" alt="Ellen">
                     </div>
                     <div class="team-card__content">
                         <h3>Ellen</h3>
-                        <p>Student med interesse for IT og problemløsning.</p>
+                        <p>Student med interesse for frontend, brukeropplevelse og testing.</p>
                         <a href="pages/Ellen.html">Se CV</a>
                     </div>
                 </article>
 
                 <article class="team-card">
                     <div class="team-card__image-wrap">
-                        <img class="team-card__image" src="images/Hanna.JPG" alt="Hanna">
+                        <img class="team-card__image" src="images/hanna-8.JPG" alt="Hanna">
                     </div>
                     <div class="team-card__content">
                         <h3>Hanna</h3>
-                        <p>Student med interesse for  IT og problemløsning</p>
+                        <p>Student med interesse for UX-design og webutvikling.</p>
                         <a href="pages/Hanna.html">Se CV</a>
                     </div>
                 </article>
@@ -94,7 +118,32 @@
                     </div>
                 </article>
             </div>
-                </main>
+        </section>
+
+        <section id="contact" class="contact-section">  
+            <h2>Kontakt oss</h2>
+            <p>Har du spørsmål er det bare å kontakte oss!</p>
+
+            <div class="contact-options">
+                <a class="contact-option" href="tel:+4745801414" aria-label="Ring Hanna på telefon" title="Ring Hanna">
+                    <span class="contact-icon" aria-hidden="true">&#9742;</span>
+                    <span class="contact-label">45801414</span>
+                </a>
+                <a class="contact-option" href="mailto:hannaf@uia.no" aria-label="Send e-post til Hanna" title="Send e-post">
+                    <span class="contact-icon" aria-hidden="true">&#9993;</span>
+                    <span class="contact-label">hannaf@uia.no</span>
+                </a>
+                <a class="contact-option" href="https://www.linkedin.com/in/hanna-falang-9656ba212/" target="_blank" rel="noopener noreferrer" aria-label="Åpne Hanna sin LinkedIn-profil" title="Åpne LinkedIn">
+                    <img src="images/linkedin.png" alt="" class="contact-icon contact-icon-image">
+                    <span class="contact-label">LinkedIn</span>
+                </a>
+            </div>
+
+            <img class="paper-plane" src="images/papirfly.png" alt="">
+            
+        </section>
+
+    </main>
 
     <footer>
         <p>&copy; 2026 Gruppe CV</p>

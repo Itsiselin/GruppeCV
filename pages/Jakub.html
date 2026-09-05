@@ -11,8 +11,10 @@
 <body>
 
     <nav aria-label="Hovednavigasjon">
+		<img class="nav-logo" src="../images/logo-ShiftIT.jpeg" alt="ShiftIT">
         <a href="../index.html">Hjem</a>
         <a href="../index.html#om-oss">Om oss</a>
+		<a href="../index.html#contact">Kontakt</a>
     </nav>
 
     <main>
@@ -22,7 +24,7 @@
             <img src="../images/portraits/jakub-sq.jpg" alt="Iselin Rolness">
 
             <div class="profile-text">
-
+				<h1>Jakub Broz</h1>
                 <p class="study">IT og informasjonssystemer</p>
 
                 <h1></h1>
@@ -41,15 +43,17 @@
 					
 				</div>
 				<br>
-				<div class="links">
-					<a href="https://www.linkedin.com/in/jakub-broz-5860bb350/">
-						<img src="../images/linkedin.png" alt="LinkedIn">
-						<span>LinkedIn</span>
-					</a>
+				<div class="social-links">
+					
 
 					<a href="https://github.com/J6kub">
 						<img src="../images/github.svg" alt="GitHub">
 						<span>GitHub</span>
+
+						<a href="https://www.linkedin.com/in/jakub-broz-5860bb350/">
+						<img src="../images/linkedin.png" alt="LinkedIn">
+						<span>LinkedIn</span>
+					</a>
 					</a>
 				</div>
 
@@ -91,11 +95,6 @@
 						<strong>Bachelor i IT og informasjonssystemer</strong><br>
 						Universitetet i Agder<br>
 						2024 – 2027
-					</p>
-					<p>
-						<strong>Livets harde skole</strong><br>
-						Praktisk erfaring<br>
-						2003 – d.d.
 					</p>
 				</div>
 			</div>
@@ -190,17 +189,6 @@
         align-items: center;
         justify-content: center;
         gap: 8px;
-
-        width: 120px;
-        height: 50px;
-        box-sizing: border-box;
-
-        text-decoration: none;
-        border-radius: 10px;
-        padding: 10px;
-
-        background-color: orange;
-        color: white;
 
         transition: transform 0.2s;
     }
@@ -412,7 +400,7 @@
     }
 }
 	
-}</style>
+</style>
 
 <canvas id="can"></canvas>
 
@@ -497,14 +485,14 @@ class Node {
 		}
 
 		/*
-		 * Slowly calm down.
+		 * Slowly 
 		 */
 
 		this.vx *= 0.995;
 		this.vy *= 0.995;
 
 		/*
-		 * Keep them alive.
+		 * Wrap around the screen edges.
 		 */
 
 		if (this.x < -100) this.x = W + 100;
@@ -527,9 +515,7 @@ class Node {
 			pulse * 2 +
 			(this.glitch ? rr(0, 5) : 0);
 
-		/*
-		 * BIG FUCKING OUTER RING
-		 */
+		
 
 		ctx.beginPath();
 
@@ -727,9 +713,7 @@ function drawConnections() {
 			ctx.stroke();
 
 
-			/*
-			 * FUCKED-UP SECOND LINE
-			 */
+			
 
 			if (strength > 0.55) {
 
@@ -833,10 +817,7 @@ class Packet {
 		ctx.fill();
 
 
-		/*
-		 * FUCKING LONG TRAIL
-		 */
-
+		
 		ctx.beginPath();
 
 		ctx.moveTo(
