@@ -364,8 +364,8 @@ footer {
     padding: 38px 42px;
     border-radius: 16px;
     margin-bottom: 24px;
-    border-left: 4px solid #2563eb;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+    
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
 }
 
 .cv-section h2 {
