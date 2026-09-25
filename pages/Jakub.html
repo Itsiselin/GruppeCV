@@ -62,24 +62,30 @@
         </section>
         
        
-
-
-        <section class="profile-content">
+		<section class="profile-content" style="grid-template-columns: 1fr;">
 			<div class="animated-border"
 			 style="
-				--border-color: #ff6600;
+				--border-color: #e20000;
 				--border-speed: 4s;
-				--border-offset: 120deg;
+				--border-offset: 0deg;
 			 ">
             <div class="profile-card">
-
+        
                 <h2>Om meg</h2>
+        
+                <p> Jeg heter Jakub Broz og er <span id='dynamicAge'>23</span> år og kommer fra Oslo. Som alle de andre er jeg student i IT og informasjonssystemer på UiA, og liker spesielt å bygge ting som faktisk fungerer utenfor selve koden. </p>
 
-                <p> Som alle de andre er jeg student i IT og informasjonssystemer, og liker spesielt å bygge ting som faktisk fungerer utenfor selve koden. </p>
+				<p style="margin-top: 16px;"> Jeg liker å jobbe med alt fra backend og webutvikling til fysiske systemer, og har blant annet jobbet med egne infotainment-løsninger, ESP32, IoT, sensorer og 3D-printing. Jeg synes det er ekstra gøy når programvare og fysisk teknologi må spille sammen, og har blant annet jobbet med CAN-kommunikasjon i egne infotainment-prosjekter. </p>
 
-<p> Jeg liker å jobbe med alt fra backend og webutvikling til fysiske systemer, og har blant annet jobbet med egne infotainment-løsninger, ESP32, IoT, sensorer og 3D-printing. Jeg synes det er ekstra gøy når programvare og fysisk teknologi må spille sammen. </p>
-
+				<p style="margin-top: 16px;"> Jeg er også interessert i reverse engineering, og synes det er spennende å finne ut hvordan ting fungerer under overflaten. Gjennom arbeid med jernbaneteknologi har jeg blant annet jobbet med rå nettverkssniffer og analyse av meldinger og protokoller, i tillegg til å jobbe en del med API-er. På fritiden liker jeg også bilprosjekter og chiptuning. </p>
+        
             </div></div>
+        
+        </section>
+
+        <section class="profile-content" >
+			
+            
 
 				<div class="animated-border"
 				 style="
@@ -98,11 +104,46 @@
 					</p>
 				</div>
 			</div>
+			<div class="animated-border"
+				 style="
+					--border-color: #034992;
+					--border-speed: 3s;
+					--border-offset: 0deg;
+				 ">
+			<div class="profile-card" style="font-size: 14px;">
+				
+                <h2>Erfaring</h2>
+        
+                <p>
+                    <strong>Datacenter Tekniker</strong><br>
+                    NTC Services, Bulk DataCenter<br>
+                    Oktober 2024 – nå
+                </p>
+        
+                <p style="margin-top: 20px;">
+                    <strong>Fullstack utvikler</strong><br>
+                    BaneNor SF, Oslo<br>
+                    Juni 2025 – September 2025<br>
+                    Juni 2026 – September 2026
+                </p>
+        
+                <p style="margin-top: 20px;">
+                    <strong>Lærervikar</strong><br>
+                    Haugerud Ungdomskole, Oslo<br>
+                    Juli 2021 – Juni 2024
+                </p>
+        
+            </div></div>
 
         </section>
 
-
-        <section class="cv-section projects">
+		<div class="animated-border"
+				 style="
+					--border-color: #0800fc;
+					--border-speed: 15s;
+					--border-offset: 0deg;
+				 ">
+        <section class="cv-section projects" style="margin-bottom:0px !important; margin-top:0px !important;">
 
 			<h2>Prosjekter</h2>
 
@@ -151,7 +192,7 @@
 
 			</div>
 
-		</section>
+		</section></div>
 
     </main>
 
@@ -1025,6 +1066,15 @@ window.addEventListener(
 
 resize();
 animate();
+</script>
+
+<script>
+	let dnmx = document.getElementById("dynamicAge");
+	
+	let date = new Date();
+	let dateBorn = new Date("2003-04-24");
+	const age = Math.floor((date - dateBorn) / (365.25 * 24 * 60 * 60 * 1000));
+	dnmx.innerHTML = age;
 </script>
 
 </html>
